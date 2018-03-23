@@ -8,6 +8,14 @@
         return_content: yes
       register: results
       
-    - name: print results
+    - name: print all results
       debug:
         var: results
+        
+    - name: print the content from the uri
+      debug:
+        var: results.content
+        
+    - name: fail execution of the module if "False" is returned
+      fail:
+      when: "'False' in results.content"
