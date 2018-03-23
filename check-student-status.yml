@@ -4,8 +4,8 @@
   tasks:
     - name: REST call to ensure (1) have signed authorization, (2) in 3rd grade or higher, (3) student active
       uri:
-        url: http://http://teng1.eng.tlap.redhat.com
-        return_content: True
+        url: http://teng1.eng.tlap.redhat.com
+        return_content: yes
       register: results
       
     - name: print results
